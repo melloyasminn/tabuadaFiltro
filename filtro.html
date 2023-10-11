@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro</title>
+    <link rel="stylesheet" href="filtro.css">
+    <script>
+                 document.addEventListener('DOMContentLoaded', function () {
+            const inputNome = document.getElementById('inputNome');
+            const listaNomes = document.getElementById('listaNomes');
+
+            inputNome.addEventListener('input', function () {
+                const nomeDigitado = inputNome.value.toLowerCase();
+                const nomes = listaNomes.getElementsByTagName('li');
+
+                for (let index = 0; index < nomes.length; index++) {
+                    const nome = nomes[index].textContent.toLowerCase();
+
+                    if (nome.includes(nomeDigitado)) {
+                        nomes[index].innerHTML = nome.replace(nomeDigitado, '<b>' + nomeDigitado + '</b>');
+                    } else {
+                        nomes[index].innerHTML = nome;
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <main>
+    <div> </div>
+
+   <div class="div">
+        <input type="text" id="inputNome" placeholder="Digite um nome">
+       
+            <ul id="listaNomes">
+                <li>
+                    <p>joão</p>
+                </li>
+                <li>
+                    <p>claudio</p>
+                </li>
+                <li>
+                    <p>marcio</p>
+                </li>
+            </ul>
+     </div>  
+<div> </div></main>
+</body>
+
+</html>

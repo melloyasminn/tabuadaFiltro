@@ -1,0 +1,36 @@
+input{
+    margin-top: 20px;
+    border-radius: 20px 20px 20px;
+    background-color: rgba(253, 250, 255, 0.575) ;
+    font-size: 20px;
+    border: 2px white solid;
+
+} 
+    
+body{
+    background-color: rgb(237, 195, 250);
+    
+}
+
+li{
+    text-align: center;
+    list-style-type: none;
+    font-size: 30px;
+    color: rgb(192, 101, 235);
+    
+}
+
+.div{
+    background-color: rgba(255, 255, 255, 0.192);
+    text-align: center;
+    margin-top: 10%;
+   margin-left: 0;
+   border:rgb(164, 78, 214)dotted 4px;
+   border-radius: 20px 20px 20px;
+}
+
+main{
+    display: grid;
+ grid-template-columns:30% 1fr 30%;
+}
+   

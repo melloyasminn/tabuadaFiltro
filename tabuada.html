@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="tabuada.css">
+    <script>
+        function calcular() {
+    const num = document.getElementById('numero').value;
+    document.getElementById("resultado").innerHTML = '';
+    if (num !== '') {
+        for (let c = 1; c <= 10; c++) {
+            document.getElementById("resultado").innerHTML += `${num} x ${c} = ${num * c} <br>`;
+        }
+    }
+}
+    </script>
+</head>
+
+<body>
+    <h2>Informe um número para calcular a tabuada</h2>
+    <form>
+        <input id="numero" type="number" oninput="calcular()">
+    </form>
+    <div id="resultado"></div>
+</body>
+
+</html>
